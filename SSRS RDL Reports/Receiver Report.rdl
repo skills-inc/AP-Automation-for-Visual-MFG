@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Report MustUnderstand="df" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily">
+  <Description>Receiver</Description>
   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
+  <Author>Ed Hammond</Author>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="DataSourceReceiverReport">
@@ -31,7 +33,10 @@ Date        Modified By             Change Description
 4/21/2020	William Thompson			    Updated - outer join for part, outside services
 **********************************************************************************************/
 
-			 
+------	declare @ReceiverIDVar nvarchar(255) = '100000'
+------	Declare @p1 nvarchar(255) = '74922'  --'137075' 
+------		, @p2 nvarchar(255) = '1'
+					 
 SELECT 
    O.ID AS [OrderID_PO],
    O.VENDOR_ID,
@@ -255,7 +260,7 @@ AND (R.ID = @ReceiverIDVar)
                   <Width>1.39304in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.76804in</Width>
+                  <Width>2.13261in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.84095in</Width>
@@ -273,7 +278,7 @@ AND (R.ID = @ReceiverIDVar)
                   <Width>1in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.04168in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -2262,7 +2267,7 @@ AND (R.ID = @ReceiverIDVar)
             <Top>0.06944in</Top>
             <Left>0.17584in</Left>
             <Height>1.47917in</Height>
-            <Width>9.34501in</Width>
+            <Width>9.75126in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2277,7 +2282,7 @@ AND (R.ID = @ReceiverIDVar)
           </Border>
         </Style>
       </Body>
-      <Width>9.65625in</Width>
+      <Width>9.98958in</Width>
       <Page>
         <PageHeader>
           <Height>0.97917in</Height>
@@ -2316,7 +2321,7 @@ AND (R.ID = @ReceiverIDVar)
               </Paragraphs>
               <rd:DefaultName>ExecutionTime</rd:DefaultName>
               <Top>0.13889in</Top>
-              <Left>7.53821in</Left>
+              <Left>7.96529in</Left>
               <Height>0.25in</Height>
               <Width>1.98264in</Width>
               <ZIndex>1</ZIndex>
@@ -2347,9 +2352,9 @@ AND (R.ID = @ReceiverIDVar)
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.48264in</Top>
-              <Left>1.92583in</Left>
-              <Height>0.42708in</Height>
+              <Top>0.46876in</Top>
+              <Left>1.95361in</Left>
+              <Height>0.46875in</Height>
               <Width>3.89361in</Width>
               <ZIndex>2</ZIndex>
               <Style>
@@ -2380,7 +2385,7 @@ AND (R.ID = @ReceiverIDVar)
               </Paragraphs>
               <rd:DefaultName>OverallPageNumber</rd:DefaultName>
               <Top>0.65972in</Top>
-              <Left>8.60419in</Left>
+              <Left>9.01044in</Left>
               <Height>0.25in</Height>
               <Width>0.32292in</Width>
               <ZIndex>3</ZIndex>
@@ -2412,7 +2417,7 @@ AND (R.ID = @ReceiverIDVar)
               </Paragraphs>
               <rd:DefaultName>OverallTotalPages</rd:DefaultName>
               <Top>0.65972in</Top>
-              <Left>9.15627in</Left>
+              <Left>9.56252in</Left>
               <Height>0.25in</Height>
               <Width>0.36458in</Width>
               <ZIndex>4</ZIndex>
@@ -2444,7 +2449,7 @@ AND (R.ID = @ReceiverIDVar)
               </Paragraphs>
               <rd:DefaultName>Textbox9</rd:DefaultName>
               <Top>0.65972in</Top>
-              <Left>8.92711in</Left>
+              <Left>9.33336in</Left>
               <Height>0.25in</Height>
               <Width>0.22917in</Width>
               <ZIndex>5</ZIndex>
@@ -2476,7 +2481,7 @@ AND (R.ID = @ReceiverIDVar)
               </Paragraphs>
               <rd:DefaultName>Textbox9</rd:DefaultName>
               <Top>0.65972in</Top>
-              <Left>8.19794in</Left>
+              <Left>8.60419in</Left>
               <Height>0.25in</Height>
               <Width>0.40625in</Width>
               <ZIndex>6</ZIndex>
@@ -2497,10 +2502,12 @@ AND (R.ID = @ReceiverIDVar)
             </Border>
           </Style>
         </PageHeader>
-        <LeftMargin>1in</LeftMargin>
-        <RightMargin>1in</RightMargin>
-        <TopMargin>1in</TopMargin>
-        <BottomMargin>1in</BottomMargin>
+        <PageHeight>8.5in</PageHeight>
+        <PageWidth>11in</PageWidth>
+        <LeftMargin>0.5in</LeftMargin>
+        <RightMargin>0.5in</RightMargin>
+        <TopMargin>0.5in</TopMargin>
+        <BottomMargin>0.5in</BottomMargin>
         <Style />
       </Page>
     </ReportSection>
