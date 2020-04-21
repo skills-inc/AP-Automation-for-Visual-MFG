@@ -18,23 +18,18 @@
             <Value>=Parameters!VOUCHER_ID.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandText>--use live
---go
-
--- run @lab2
-
--- C:\bbb\20200316 Voucher Report SSRS\Voucher Report SSRS-01.2.1.sql
+        <CommandText>
 
 /**********************************************************************************************
-Description:	
-Sample:			
+Description:	Visual Voucher report based on QRP Report 9.0.1
+Sample:	Replace LIVE with your Infor Visual Database Name		
 
-Date        Modified By         Change Description
-----------  ------------------  ------------------------------------------------------------
-03/18/2020	William Thompson	Created.
+Date        Modified By                     Change Description
+----------  ------------------              ------------------------------------------------------------
+03/18/2020	William Thompson - Skills Inc 	Created.
 
 Tester:
-100005
+Voucher ID 100005
 **********************************************************************************************/
 
 
